@@ -1,0 +1,782 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  background-color: #faf6f0;
+}
+
+header {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-left: 150px;
+  color: #364547;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+}
+
+ul li a {
+  padding: 0 20px;
+  text-decoration: none;
+  color: #333;
+  display: inline-block;
+}
+
+li a::after {
+  content: " ";
+  display: block;
+  height: 4px;
+  width: 0;
+  background-color: #364547;
+  transition: all 0.5s;
+}
+
+li a:hover::after {
+  width: 100%;
+}
+
+main {
+  display: flex;
+  height: calc(100vh - 80px);
+  align-items: center;
+  justify-content: center;
+}
+
+.content-left h1 {
+  font-size: 2.5rem;
+  color: #364547;
+}
+
+.man {
+  width: 350px;
+  margin: 0 auto;
+}
+
+.content-left {
+  width: 40%;
+  margin-right: 250px;
+}
+
+.content-left .hire-me {
+  color: #fff;
+  font-size: 0.8rem;
+  width: 150px;
+  height: 40px;
+  margin-top: 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #364547;
+  box-shadow: 2px 5px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-left .hire-me:hover {
+  background-color: #7c7575;
+  transition: all ease 0.4s;
+}
+
+.about {
+  display: flex;
+  border: 1px solid #364547;
+  height: 60vh;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  margin-bottom: 80px;
+  line-height: 1.7rem;
+  background-color: #364547;
+  color: #fff;
+}
+
+.about-me {
+  flex-wrap: wrap;
+  margin-top: 60px;
+  margin-left: 200px;
+}
+
+.about-me h2 {
+  font-size: 2.2rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.about-me h2::after {
+  content: " ";
+  display: block;
+  height: 4px;
+  width: 0;
+  background-color: #364547;
+  transition: all 0.5s;
+}
+
+.about-me h2:hover::after {
+  width: 24%;
+}
+
+.about-me h3 {
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.about-me p {
+  width: 45vw;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.man-face {
+  padding-left: 200px;
+}
+
+.G {
+  color: #fbbc05;
+  font-weight: 600;
+}
+
+.F {
+  color: #1877f2;
+  font-weight: 600;
+}
+
+.R {
+  color: #f15822;
+  font-weight: 600;
+}
+
+.portfolio {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 20px 60px 20px;
+}
+
+.p-head {
+  font-size: 2rem;
+  text-align: center;
+  color: #364547;
+  padding: 20px 20px;
+  letter-spacing: 1px;
+}
+
+.p-box {
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.p-b-container {
+  width: 90%;
+  height: 70vh;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.text-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(218, 215, 207, 0.76);
+  display: none;
+}
+
+.text-overlay h1,
+p {
+  color: #364547;
+}
+
+.text-overlay h1 {
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1px;
+}
+
+.text-overlay p a {
+  font-size: 1.1rem;
+  margin: 0;
+  text-decoration: none;
+  color: #364547;
+}
+
+.p-box:hover .text-overlay {
+  display: flex;
+}
+
+.p-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact {
+  width: 100%;
+  height: 80vh;
+  border-top: 1px solid #364547;
+  margin-top: 0px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.1rem;
+}
+
+.contact h3 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+font {
+  display: block;
+}
+
+.name-form,
+.email-form {
+  width: 100%;
+  margin: 0 50px;
+}
+
+.name-form font,
+.email-form font {
+  font-size: 15px;
+  opacity: 0.5;
+}
+
+.name-form input,
+.email-form input {
+  height: 50px;
+  width: 300px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid #364547;
+  margin: 5px 0;
+}
+
+.name-form input::placeholder,
+.email-form input::placeholder {
+  opacity: 0.5;
+  letter-spacing: 1px;
+}
+
+.name-form input:focus,
+.email-form input:focus {
+  border-bottom: 2px solid #7c7575;
+  transition: all ease 0.5s;
+}
+
+.message font {
+  font-size: 15px;
+  opacity: 0.5;
+}
+
+.message textarea {
+  width: 100%;
+  height: 50px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 2px solid #364547;
+  font-size: 15px;
+  margin: 5px 0;
+}
+
+.submit-btn {
+  width: 250px;
+  height: 45px;
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: #364547;
+  color: #fff;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #7c7575;
+  transition: all ease 0.4s;
+}
+
+@media screen and (max-width: 1252px) {
+  .about {
+    display: flex;
+    border: 1px solid #364547;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    margin-bottom: 80px;
+    line-height: 1.7rem;
+    background-color: #364547;
+    color: #fff;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-left: 100px;
+    color: #364547;
+  }
+
+  .about-me {
+    flex-wrap: nowrap;
+    margin-top: 60px;
+    margin-left: 200px;
+  }
+
+  .man-face {
+    padding-left: 10px;
+  }
+}
+
+@media screen and (max-width: 1055px) {
+  .content-left h1 {
+    font-size: 2.3rem;
+    color: #364547;
+  }
+
+  .about {
+    display: flex;
+    border: 1px solid #364547;
+    height: 80vh;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    margin-bottom: 80px;
+    line-height: 1.7rem;
+    background-color: #364547;
+    color: #fff;
+  }
+
+  .about-me h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+
+  .about-me p {
+    width: 40vw;
+    font-size: 0.8rem;
+    color: #fff;
+    margin-right: 50px;
+  }
+
+  .man {
+    width: 250px;
+    margin: 0 auto;
+  }
+
+  .man-face {
+    padding-left: 10px;
+    width: 220px;
+  }
+
+  .content-left {
+    width: 40%;
+    margin-right: 150px;
+  }
+
+  .logo {
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-left: 10px;
+    color: #364547;
+  }
+
+  ul li a {
+    padding: 0 20px;
+    text-decoration: none;
+    color: #333;
+    display: inline-block;
+    font-size: 11px;
+  }
+
+  ul {
+    margin-right: 0px;
+  }
+
+  .text-overlay h1 {
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 1px;
+  }
+
+  .text-overlay p a {
+    font-size: 0.7rem;
+    margin: 0;
+    text-decoration: none;
+    color: #364547;
+  }
+}
+
+@media screen and (max-width: 892px) {
+  main {
+    overflow: hidden;
+    height: calc(70vh - 80px);
+  }
+
+  .content-right {
+    display: none;
+  }
+
+  .content-left {
+    margin: 0 auto;
+    width: 70%;
+  }
+
+  .content-left h1 {
+    font-size: 2rem;
+  }
+
+  .pic {
+    display: none;
+  }
+
+  .about-me {
+    flex-wrap: nowrap;
+    margin-top: 60px;
+    margin-left: 40px;
+  }
+
+  .about-me h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+
+  .about-me h3 {
+    font-size: 1.2rem;
+    color: #fff;
+  }
+
+  .about-me p {
+    width: 78vw;
+    font-size: 0.8rem;
+    color: #fff;
+  }
+
+  .p-b-container {
+    width: 95%;
+    height: 60vh;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+
+  .p-head {
+    font-size: 2rem;
+    text-align: center;
+    color: #364547;
+    padding: 5px 20px;
+    letter-spacing: 1px;
+  }
+
+  .contact {
+    width: 100%;
+    height: 80vh;
+    border-top: 1px solid #364547;
+    margin-top: 0px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .name-form,
+  .email-form {
+    width: 50%;
+    margin: 0 20px;
+  }
+
+  .name-form font,
+  .email-form font {
+    font-size: 12px;
+    opacity: 0.5;
+  }
+
+  .name-form input,
+  .email-form input {
+    height: 50px;
+    width: 200px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid #364547;
+    margin: 5px 0;
+  }
+
+  .name-form input::placeholder,
+  .email-form input::placeholder {
+    opacity: 0.5;
+    letter-spacing: 1px;
+  }
+
+  .name-form input:focus,
+  .email-form input:focus {
+    border-bottom: 2px solid #7c7575;
+    transition: all ease 0.5s;
+  }
+
+  .message font {
+    font-size: 12px;
+    opacity: 0.5;
+  }
+
+  .message textarea {
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 2px solid #364547;
+    font-size: 15px;
+    margin: 5px 0;
+  }
+
+  .contact h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+  }
+
+  .contact h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1rem;
+  }
+
+  .text-overlay h1 {
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 1px;
+  }
+
+  .text-overlay p a {
+    font-size: 0.7rem;
+    margin: 0;
+    text-decoration: none;
+    color: #364547;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .logo {
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-left: 10px;
+    color: #364547;
+  }
+
+  ul li a {
+    padding: 0 10px;
+    text-decoration: none;
+    color: #333;
+    display: inline-block;
+    font-size: 10px;
+  }
+
+  main {
+    overflow: hidden;
+    height: calc(100vh - 80px);
+  }
+
+  .content-right {
+    display: none;
+  }
+
+  .content-left {
+    margin: 0 auto;
+    width: 95%;
+  }
+
+  .content-left h1 {
+    font-size: 1.8rem;
+  }
+
+  .pic {
+    display: none;
+  }
+
+  .about-me {
+    flex-wrap: nowrap;
+    width: 90%;
+    margin-top: 20px;
+    margin-left: 5px;
+  }
+
+  .about-me h2 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+
+  .about-me h3 {
+    font-size: 1.1rem;
+    color: #fff;
+  }
+
+  .about-me p {
+    width: 78vw;
+    font-size: 0.8rem;
+    color: #fff;
+  }
+
+  .p-b-container {
+    width: 95%;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+
+  .p-head {
+    font-size: 1.7rem;
+    text-align: center;
+    color: #364547;
+    padding: 5px 20px;
+    letter-spacing: 1px;
+  }
+
+  .text-overlay h1 {
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 1px;
+  }
+
+  .text-overlay p a {
+    font-size: 0.8rem;
+    margin: 0;
+    text-decoration: none;
+    color: #364547;
+  }
+
+  .contact {
+    width: 100%;
+    height: 80vh;
+    border-top: 1px solid #364547;
+    margin-top: 0px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .name-form,
+  .email-form {
+    width: 50%;
+    margin: 0 20px;
+  }
+
+  .name-form font,
+  .email-form font {
+    font-size: 10px;
+    opacity: 0.5;
+  }
+
+  .name-form input,
+  .email-form input {
+    height: 50px;
+    width: 150px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid #364547;
+    margin: 5px 0;
+  }
+
+  .name-form input::placeholder,
+  .email-form input::placeholder {
+    opacity: 0.5;
+    letter-spacing: 1px;
+    background-color: transparent;
+  }
+
+  .name-form input:focus,
+  .email-form input:focus {
+    border-bottom: 2px solid #7c7575;
+    transition: all ease 0.5s;
+  }
+
+  .message font {
+    font-size: 10px;
+    opacity: 0.5;
+  }
+
+  .message textarea {
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 2px solid #364547;
+    font-size: 15px;
+    margin: 5px 0;
+  }
+
+  .contact h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+  }
+
+  .contact h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 0.8rem;
+  }
+}
