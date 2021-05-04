@@ -345,10 +345,22 @@ font {
   transition: all ease 0.4s;
 }
 
+.button-a a {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
+  background: #364547;
+  padding: 7px 12px;
+  font-size: 18px;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.15);
+}
+
 @media screen and (max-width: 1252px) {
   .about {
     display: flex;
-    border: 1px solid #364547;
+    border: 1px solid;
     height: 100vh;
     align-items: center;
     justify-content: space-evenly;
@@ -609,6 +621,18 @@ font {
     margin: 0;
     text-decoration: none;
     color: #364547;
+  }
+
+  .button-a a {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: #fff;
+    background: #364547;
+    padding: 2px 10px;
+    font-size: 15px;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.15);
   }
 }
 
