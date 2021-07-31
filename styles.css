@@ -357,6 +357,30 @@ font {
   box-shadow: rgba(0, 0, 0, 0.15);
 }
 
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 60px;
+}
+
+.social-links a {
+  color: #364547;
+}
+
+.social-links a:hover {
+  color: #7c7575;
+}
+
+.s-l-g {
+  padding: 10px;
+}
+
+.s-l-l {
+  padding: 10px;
+}
+
 @media screen and (max-width: 1252px) {
   .about {
     display: flex;
