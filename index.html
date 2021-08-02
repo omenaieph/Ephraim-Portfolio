@@ -100,7 +100,7 @@
     <h3>Reach out if you have questions or proposal, <br> or maybe you just want to check up?, <br> please say hello!</h3>
 
     <div class="form">
-        <form action="mail.php" method="post" id="form1">
+        <form name="contact" action="/thankyou.html" method="POST" data-netlify="true" id="New-Mail" enctype="application/x-www-form-urlencoded">
             <div class="name-form">
                 <font for="name">Your Name</font>
                 <input type="text" placeholder="Full Name" name="name" id="name">
@@ -108,16 +108,16 @@
 
             <div class="email-form">
                 <font for="email">Email</font>
-                <input type="email" placeholder="reachme@gmail.com" name="emailaddress" id="email">
+                <input type="email" placeholder="reachme@gmail.com" name="email" id="email">
+            </div>
+            <div class="message-me">
+                <font>Your Message</font>
+                <textarea name="message" cols="40" rows="10"></textarea>
             </div>
         </form>
     </div>
-    <div class="message">
-        <font for="message">Your Message</font>
-        <textarea name="message" id="" cols="40" rows="10"></textarea>
-    </div>
 
-    <button class="submit-btn" type="submit" form="form1" value="Submit">Holla!</button>
+    <button class="submit-btn" type="submit" form="New-Mail" value="Submit">Holla!</button>
 </section>
 
 <div class="social-links">
